@@ -4,15 +4,16 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="ISO-8859-1">
-<title>Registro</title>
+	<meta charset="ISO-8859-1">
+	<title>Registro</title>
 </head>
 <body>
 
-	<form:form action="procesarFormulario" modelAttribute="persona">
+	<h1 align='center' >Formulario de Registro</h1><br>
 	
+	<form:form action="procesarFormulario" modelAttribute="persona" style='background-color:lime; width:500px; height:600px; padding:50px; border-radius:10px; margin:0px auto'>
 		<strong>Nombre: </strong><form:input path="nombre"/>
-		<form:errors path="nombre" style="color:red"/> 
+		<form:errors path="nombre"/> 
 	
 		<br><br><br>
 		
@@ -42,10 +43,12 @@
 		<br><br><br>
 		
 		<strong>Ciudad:</strong> 	
-		Madrid<form:radiobutton path="ciudad" value="Madrid"/>
-		Barcelona<form:radiobutton path="ciudad" value="Barcelona"/>
-		Sevilla<form:radiobutton path="ciudad" value="Sevilla"/>
-		Galicia<form:radiobutton path="ciudad" value="Galicia"/>
+		<select name="Ciudad" id="lang">
+	        <option value="Madrid">Madrid</option>
+	        <option value="Barcelona">Barcelona</option>
+	        <option value="Sevilla">Sevilla</option>
+	        <option value="Galicia">Galicia</option>
+        </select>
 		
 		<br><br><br>
 		
@@ -61,8 +64,8 @@
 		<br><br><br>
 		
 		<input type="submit" value="Enviar">
-	
 	</form:form>
+
 
 </body>
 </html>
